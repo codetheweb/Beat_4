@@ -18,6 +18,7 @@
  * 1474L (Unix), 30895C 
  */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 /*-- Placeholders --*/
 .modactions :before, .modactions :after, #tabs ul :before, #tabs ul :after {
     /* %pseudo */
@@ -84,76 +85,16 @@ hr {
     user-select: none;
 }
 
-/* TESTBED FOR MIXINS */
-#test {
-    -moz-box-sizing: padding-box;
-    box-sizing: padding-box;
-    top: 5px;
-    left: 3em;
-    width: 10px;
-    height: 10px;
-    content: "!";
-    position: sticky;
-    top: 1337px;
-    left: 1337px;
-    padding: 2.5px;
-    padding: -webkit-calc(2px);
-    background: -webkit-linear-gradient(45deg, white 0%, black 100%) gray no-repeat 20px 10px/30px 40px;
-    background: -o-linear-gradient(45deg, white 0%, black 100%) gray no-repeat 20px 10px/30px 40px;
-    background: linear-gradient(45deg, white 0%, black 100%) gray no-repeat 20px 10px/30px 40px;
-    background: -webkit-radial-gradient(40px 10px, circle 16px, white 0%, black 10%, red 20%, gold 30%, rgba(100, 0, 0, 0.2) 40%, #ffedcb 50%, #00000a 60%, blue 100%);
-    background: -o-radial-gradient(40px 10px, circle 16px, white 0%, black 10%, red 20%, gold 30%, rgba(100, 0, 0, 0.2) 40%, #ffedcb 50%, #00000a 60%, blue 100%);
-    background: radial-gradient(circle 16px at 40px 10px, white 0%, black 10%, red 20%, gold 30%, rgba(100, 0, 0, 0.2) 40%, #ffedcb 50%, #00000a 60%, blue 100%);
-    color: black;
-    background: -webkit-radial-gradient(ellipse closest-side, white 0%, black 100%);
-    background: -o-radial-gradient(ellipse closest-side, white 0%, black 100%);
-    background: radial-gradient(ellipse closest-side at center, white 0%, black 100%);
-}
-
 fieldset, textarea, select, a, input, #wrapper, #header, #blog-errors {
     outline: none;
 }
 
-/*-- Selection and WebKit scrollbars --*/
-*::-moz-selection {
-    background: rgba(130, 211, 214, 0.44);
-    color: black !important;
-}
-
-*::selection {
-    background: rgba(130, 211, 214, 0.44);
-    color: black !important;
-}
-
-*::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-    background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-    background: rgba(200, 200, 200, 0.3);
-    padding: 2px;
-    border-radius: 6px;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2) inset;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-    background: rgba(200, 200, 200, 0.6);
-}
-
-*::-webkit-scrollbar-button {
-    max-height: 1px;
-    max-width: 1px;
-}
-
-*::-webkit-scrollbar-corner {
-    display: none;
-}
-
 /*-- General --*/
 html {
-    background-color: #527f8d;
+    background-color: #1E9A92;
+    position: absolute;
+    width: 70%;
+    left: 15%;
 }
 
 body {
@@ -168,15 +109,6 @@ body {
     text-rendering: OptimizeLegibility;
 }
 
-body::-webkit-scrollbar {
-    width: 13px;
-    height: 13px;
-}
-
-body::-webkit-scrollbar-thumb {
-    border: 2px solid #fdfdfe;
-}
-
 h2 {
     color: black;
 }
@@ -185,13 +117,17 @@ img:not([src*="smilies"]):not([class^="latex"]):not([alt="Feed"]):hover {
     background: url("data:image/png;UTF-8;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3gMJCy8HXmWgigAAAC5JREFUOMtj/P//fwMDccCIGEVMDFQGowaOGjgYDGQhNgcwMDCcGw3DUQNHrIEA0WgE2XBobBkAAAAASUVORK5CYII=") repeat;
 }
 
-a:link, a:visited {
-    color: #278bc2;
+a {
+    color: #556270;	
+    transition-property: all;
+    transition-delay: 0.1s;
+    transition-duration: 0.3s;
 }
 
 a:hover {
     color: #ff0505;
     text-decoration: underline;
+    transition-duration: 0.5s;
 }
 
 input {
@@ -232,71 +168,35 @@ input {
 /*-- Nav-bar --*/
 #navigation_box {
     position: absolute;
-    top: 116px;
-    left: 100px;
-    width: 88%;
-    background: #fdfdfe;
+    top: 8%;
+    left: 0;
+    width: 100%;
     color: transparent;
-    padding: 2px 10px 22px;
-    border-bottom: 2px solid #f8f8f9;
-    overflow-x: auto;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
 }
 
 #navigation_box a {
-    color: #278bc2;
     font-size: 15px;
     text-transform: uppercase;
     margin-right: 8px;
-}
-
-#navigation_box a:hover {
-    color: #ff0505;
-}
-
-#right_navigation_box {
-    float: left;
-}
-
-#left_navigation_box a:last-child {
-    padding-right: 10px;
+    line-height: 20px
 }
 
 /*-- Header --*/
 #header {
     width: 100%;
-    height: 90px;
-    background: whitesmoke;
+    height: 100%;
+    background: #FF8585;
+    color: #C7F464;
     overflow: hidden;
 }
 
 #header h1 {
     position: relative;
-    left: 100px;
-    width: calc(100% - 100px);
-    font: 25pt/2em 'Times New Roman', times, serif;
-    text-align: left !important;
-    padding-bottom: 24px;
-    overflow: hidden;
-}
-
-#header h1:after {
-    content: "Welcome to my blog!";
-    position: absolute;
-    top: 55px;
-    left: 0;
-    color: #afafaf;
-    font: 500 11px/1.5em "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
-}
-
-#header h1::-webkit-scrollbar, #header h1::-webkit-scrollbar-thumb {
-    height: 6px;
-    box-shadow: none;
-}
-
-#header:hover h1 {
-    padding-bottom: 10px;
-    padding-bottom: -webkit-calc(16px);
-    overflow-x: auto;
+    font: "Open Sans", sans-serif;
+    font-size: 50px;
+    text-align: center !important;
 }
 
 /*-- Main content --*/
@@ -313,34 +213,18 @@ input {
     width: 80%;
 }
 
-#main > * {
-    background: #fdfdfe;
-}
-
 #main > h1 {
     margin-bottom: 36px;
 }
 
 /*-- Post new entry --*/
-#post-new-entry:link, #post-new-entry:visited {
-    color: black !important;
-    font-size: 12px;
-}
-
-#post-new-entry:hover {
-    text-decoration: none;
-}
-
-#post-new-entry:before {
-    content: '+';
-    padding: 3px 7px;
-    border: 1px solid;
-    border-radius: 15px;
-    margin-right: 5px;
-}
-
 #post-new-entry-p {
-    margin: 0 auto 1.6em;
+    position: absolute;
+    top: -14%;
+    right: 0;
+    font-size: 200%;
+    border: 4px dashed #556270;
+    padding: 10px;
 }
 
 /*--Entries & Comments --*/
@@ -686,15 +570,18 @@ div.quotetitle, div.quotecontent {
 }
 
 #side:after {
-    content: "+";
+    font-family: FontAwesome;
+    font-size: 30pt;
+    color: #556270;
+    content: "\f0c9";
     position: fixed;
     top: 0;
     left: 0;
     display: block;
-    height: 100%;
+    /*height: 100%;
     background: #527f8d;
-    color: #f5f5ff;
-    font: 21pt 'Open Sans', Helvetica, sans-serif;
+    color: #f5f5ff;*/
+    /*font: 21pt 'Open Sans', Helvetica, sans-serif;*/
     padding: 20px 12px 17px;
     -webkit-transition-delay: 0.35s;
     -moz-transition-delay: 0.35s;
