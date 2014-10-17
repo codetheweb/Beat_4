@@ -98,8 +98,6 @@ html {
 }
 
 body {
-    /* force sass to output @charset */
-    var-charset: "??";
     min-height: 400px;
     background: #fdfdfe;
     font: normal 8pt/1.2em "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
@@ -107,6 +105,9 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     text-rendering: OptimizeLegibility;
+    -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.54);
+-moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.54);
+box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.54);
 }
 
 h2 {
@@ -557,11 +558,9 @@ div.quotetitle, div.quotecontent {
     top: 0;
     left: -340px;
     height: 100%;
-    background: #527f8d;
+    background: #556270;
     color: white;
     font: 12px/2em "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
-    padding-left: 38px;
-    padding-right: 50px;
     box-shadow: 0 0 5px #527f8d;
     z-index: 100;
     -webkit-transition: 0.5s ease;
@@ -578,27 +577,11 @@ div.quotetitle, div.quotecontent {
     top: 0;
     left: 0;
     display: block;
-    /*height: 100%;
-    background: #527f8d;
-    color: #f5f5ff;*/
-    /*font: 21pt 'Open Sans', Helvetica, sans-serif;*/
     padding: 20px 12px 17px;
     -webkit-transition-delay: 0.35s;
     -moz-transition-delay: 0.35s;
     -o-transition-delay: 0.35s;
     transition-delay: 0.35s;
-}
-
-#side:before {
-    content: "";
-    position: fixed;
-    top: 31px;
-    left: 39px;
-    display: block;
-    border-width: 9px 0 9px 9px;
-    border-color: transparent #527f8d;
-    border-style: solid;
-    pointer-events: none;
 }
 
 #side:hover {
@@ -655,40 +638,42 @@ div.quotetitle, div.quotecontent {
     margin: 0 !important;
 }
 
-.widget-title {
-    color: white;
-    border-bottom: 2px solid #9bcada;
-    overflow: hidden;
-}
-
 .widget > .widget-content {
     position: fixed;
-    left: 280px;
+    left: 260px;
     width: 340px;
     min-height: 50px;
     max-height: 250px;
-    background: #527f8d;
+    background: #556270;
     padding: 10px 0 5px 0;
-    border-left: 70px solid transparent;
-    box-shadow: 0 0 5px #527f8d;
     overflow-x: hidden;
     resize: both;
     border-radius: 1px;
     -webkit-transition: opacity 0.3s ease-in-out;
     -o-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
+    -webkit-box-shadow: 11px 0px 18px 0px rgba(50, 50, 50, 0.54);
+    -moz-box-shadow:    11px 0px 18px 0px rgba(50, 50, 50, 0.54);
+    box-shadow:         11px 0px 18px 0px rgba(50, 50, 50, 0.54);
+}
+
+.widget > .widget-header > .widget-title {
+    border-bottom: 3px solid #51CDC5;
+    padding: 10px 139px 10px 5px;
+    width: 30%;
+    color: white;
+    font-weight: bold !important;
+    font-size: 13px;
 }
 
 .widget:hover > .widget-header > .widget-title {
+    background: #9bcada;
     color: #3d5f6a;
-    border-bottom: none;
 }
 
 .widget:hover > .widget-header {
     background: #9bcada;
-    padding: 5px;
-    cursor: default;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 .widget:hover > .widget-content {
@@ -737,31 +722,46 @@ div.quotetitle, div.quotecontent {
     color: white;
     font-weight: bold !important;
     font-size: 13px;
-    padding-right: 144px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #9bcada;
-    cursor: default;
+    padding: 10px 139px 10px 5px;
+    border-bottom: 3px solid #51CDC5;
+    width: 50%;
 }
 
 #user-menu-widget:hover:before {
     background: #9bcada;
     color: #3d5f6a;
     padding: 10px 139px 10px 5px;
-    border-radius: 10px;
+    border-radius: 3px;
+}
+
+.widget-header::before {
+  color: white;
+  font-weight: bold !important;
+  font-size: 13px;
+  padding: 10px 139px 10px 5px;
+  border-bottom: 3px solid #51CDC5;
+}
+
+.widget-header:hover:before {
+    background: #9bcada;
+    color: #3d5f6a;
+    padding: 10px 139px 10px 5px;
+    border-radius: 3px;
 }
 
 #user-menu-widget:hover > div {
     position: fixed;
     top: 9px;
-    left: 280px;
+    left: 260px;
     width: 340px;
     max-height: 90vh;
     display: block;
-    background: #527f8d;
+    background: #556270;
     padding: 0 7px 10px 13px;
-    border-left: 50px solid transparent;
-    box-shadow: 0 0 5px #527f8d;
     overflow-x: hidden;
+    -webkit-box-shadow: 11px 0px 18px 0px rgba(50, 50, 50, 0.54);
+    -moz-box-shadow:    11px 0px 18px 0px rgba(50, 50, 50, 0.54);
+    box-shadow:         11px 0px 18px 0px rgba(50, 50, 50, 0.54);
 }
 
 /*-- Archives --*/
