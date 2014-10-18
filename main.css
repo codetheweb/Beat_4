@@ -24,7 +24,6 @@
     /* %pseudo */
     content: "";
     position: absolute;
-    display: inline-block;
 }
 
 .modactions a[title="Edit post"] :before, .modactions a[title="Delete post"] :before, #tabs ul li:first-child:before, #tabs ul li:first-child:after, #tabs ul li:last-child:not(:nth-child(3)):before {
@@ -34,6 +33,10 @@
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.modactions {
+  display: table-cell;
 }
 
 #archive-widget > .widget-content, #shouts-widget > .widget-content {
@@ -106,8 +109,14 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: OptimizeLegibility;
     -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.54);
--moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.54);
-box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.54);
+    -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.54);
+    box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.54);
+}
+
+.message::first-letter {
+  font-family: "Impact";
+  font-size: 300%;
+  margin-right: 3px;
 }
 
 h2 {
@@ -210,7 +219,7 @@ input {
 #main {
     position: relative;
     top: 70px !important;
-    left: 100px;
+    left: 80px;
     width: 80%;
 }
 
@@ -288,8 +297,25 @@ div.entrywrap {
     background: transparent;
 }
 
+.post-replies::before {
+    font-family: FontAwesome;
+    font-size: 30pt;
+    color: #556270;
+    content: "\f086";
+    margin-right: 4px;
+}
+
+.post-comment::before {
+    font-family: FontAwesome;
+    font-size: 30pt;
+    color: #556270;
+    content: "\f0e5";
+    margin-right: 4px;
+}
+
 .message {
     font: 13px/2em "Open Sans", "Microsoft Sans Serif", sans-serif;
+    margin-bottom: 20px;
 }
 
 .message img {
@@ -303,6 +329,27 @@ div.entrywrap {
 .efooter {
     position: relative;
     top: 5px;
+    display: table;
+}
+
+.efooter ul {
+    list-style: none;
+    display: table-row;
+}
+
+.efooter ul li {
+    display: table-cell;
+}
+
+.efooter ul li a {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.report-icon {
+    list-style: none;
+    margin-top: -35px;
+    margin-left: 400px;
 }
 
 div.comment {
@@ -342,10 +389,10 @@ div.comment {
 /*-- Icons --*/
 .modactions a[title="Edit post"], .modactions a[title="Delete post"],
 .modactions a[title="Report this post"] {
-    /* %standard */
     color: transparent;
     font-size: 1px;
     position: relative;
+    margin-left: 20px;
 }
 
 .modactions a[title="Edit post"]:after, .modactions a[title="Edit post"] :before, .modactions a[title="Edit post"] :after, .modactions a[title="Delete post"]:after, .modactions a[title="Delete post"] :before, .modactions a[title="Delete post"] :after, .modactions a[title="Report this post"]:after, .modactions a[title="Report this post"] :before, .modactions a[title="Report this post"] :after {
