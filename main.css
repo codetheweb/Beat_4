@@ -178,7 +178,7 @@ input {
 /*-- Nav-bar --*/
 #navigation_box {
     position: absolute;
-    top: 8%;
+    top: 1%;
     left: 0;
     width: 100%;
     color: transparent;
@@ -207,6 +207,7 @@ input {
     font: "Open Sans", sans-serif;
     font-size: 50px;
     text-align: center !important;
+    margin-top: 8%;
 }
 
 /*-- Main content --*/
@@ -230,16 +231,33 @@ input {
 /*-- Post new entry --*/
 #post-new-entry-p {
     position: absolute;
-    top: -12%;
-    right: 0;
-    font-size: 200%;
-    border: 4px dashed #556270;
-    padding: 10px;
+    top: -1000%;
+}
+#post-new-entry-p a::before {
+    position: fixed;
+    top: 10%;
+    right: 4%;
+    font-family: FontAwesome;
+    content: "\f044";
+    font-size: 800%;
+    color: #556270;
+}
+#post-new-entry-p:hover {
+    color: black;
 }
 
 /*--Entries & Comments --*/
 div.entry {
     padding-bottom: 40px;
+    text-align: center;
+}
+
+div.entry h2 {
+    text-align: center;
+}
+
+div.entry h2 a {
+	display: none;
 }
 
 .entry h1 a:link, .entry h1 a:visited, .entry h2 a:link, .entry h2 a:visited {
@@ -262,20 +280,10 @@ div.entry {
     display: inline-block;
     color: #3c3c3c;
     font: normal 1em/1 "Microsoft Sans Serif", sans-serif;
-    -webkit-transform: skew(-10deg) translateZ(0px);
-    /* add GPU acceleration on WebKit */
-    -ms-transform: skew(-10deg);
-    -o-transform: skew(-10deg);
-    transform: skew(-10deg);
 }
 
 .entry strong > a:hover {
     color: black;
-    -webkit-transform: skew(0deg) translateZ(0px);
-    /* add GPU acceleration on WebKit */
-    -ms-transform: skew(0deg);
-    -o-transform: skew(0deg);
-    transform: skew(0deg);
 }
 
 .entry > h2 {
@@ -316,6 +324,8 @@ div.entrywrap {
 .message {
     font: 13px/2em "Open Sans", "Microsoft Sans Serif", sans-serif;
     margin-bottom: 20px;
+    text-align: left;
+    text-indent: 5%;
 }
 
 .message img {
