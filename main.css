@@ -255,25 +255,34 @@ div.entry {
 div.entry h1 {
     font-size: 400%;
     margin-top: 0;
-}
-div.entry h2:before {
-    font-family: FontAwesome;
-    font-size: 200%;
-    content: "\f017";
-    width: 100%;
-    height: 10%;
-    text-align: center;
-    z-index: 100000;
-    background-color:white;
+    margin-bottom: 0;
 }
 
 div.entry h2 {
-    text-align: center;
+    width: 50%;
+    position: static;
+    top: 8%;
+    left: 35%;
 }
 
-div.entry h2 a {
-	display: none;
+div.entry h2, .post-replies, .post-comment {
+    color: transparent;
+    transition-property: all;
+    transition-delay: 0.1s;
+    transition-duration: 0.5s;
 }
+
+div.entry h2:hover {
+    color: black;
+}
+
+div.entry h2:hover strong a {
+    color: black !important;
+}
+
+/*div.entry h2:hover:before {
+    color: transparent;
+}*/
 
 .entry h1 a:link, .entry h1 a:visited, .entry h2 a:link, .entry h2 a:visited {
     color: black;
@@ -291,29 +300,12 @@ div.entry h2 a {
     color: #ff0505;
 }
 
-.entry strong > a:link, .entry strong > a:visited {
-    display: inline-block;
-    color: #3c3c3c;
-    font: normal 1em/1 "Microsoft Sans Serif", sans-serif;
-}
-
 .entry strong > a:hover {
     color: black;
 }
 
 .entry > h2 {
     margin-top: .3em;
-}
-
-.entry > h2 > a:before {
-    content: "> ";
-    position: relative;
-    top: 1px;
-    top: -moz-calc(-1px);
-    left: 5px;
-    line-height: 1em;
-    padding-right: 5px;
-    font-weight: bold;
 }
 
 div.entrywrap {
