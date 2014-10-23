@@ -1,22 +1,25 @@
 @charset "UTF-8";
-/*!
- * Fresh v2.0.0
- * By AoPS user NeoMathematicalKid
- * Somewhat based on the Silesia theme for Automattic blogs
- * Written in SASS (SCSS syntax)
-
- * Credit is due where credit is due, especially to:
- * PythonNut, Binomial-theorem, El_Ectric, Red, Tungsten, and all who made a CSS for AoPS
- * And yes, you can edit this theme, just as long as it still looks good. ;)
-
- * Licensed under GNU GPL v2.0 or later:
- * https://gnu.org/licenses/gpl-2.0.html
-
- * Copyleft 2014 NeoMathematicalKid
- */
-/* --STATS--
- * 1474L (Unix), 30895C 
- */
+/*
+    Credit to @NeoMathmaticalKid for most of styling, 
+    to @PythonNut for ideas, 
+    to @FontAwesome for all their awesome icons.
+    Thanks Adobe Kuler for 'Cheer Up Emo Kid', colors for this theme.
+    
+    On Github: https://github.com/123dj/Beat_4
+    
+    You may modifiy any part of this theme as long as you give credit to the original owner (nxt/123dj)
+    
+    Enjoy.
+    
+     ____                   _              _  _   
+    |  _ \                 | |            | || |  
+    | |_) |   ___    __ _  | |_           | || |_ 
+    |  _ <   / _ \  / _` | | __|          |__   _|
+    | |_) | |  __/ | (_| | | |_              | |  
+    |____/   \___|  \__,_|  \__|             |_|  
+                                  ______          
+                                 |______|         
+*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
 @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 /*-- Placeholders --*/
@@ -128,7 +131,7 @@ img:not([src*="smilies"]):not([class^="latex"]):not([alt="Feed"]):hover {
 }
 
 a {
-    color: #556270;	
+    color: #556270;    
     transition-property: all;
     transition-delay: 0.1s;
     transition-duration: 0.3s;
